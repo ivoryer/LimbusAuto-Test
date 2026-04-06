@@ -1,0 +1,9 @@
+pip==26.0.1
+setuptools==82.0.1
+wheel==0.46.3
+packaging==26.0
+
+opencv-python==4.9.0.80
+pyautogui==0.9.54
+pywin32==306
+numpy==1.26.4
