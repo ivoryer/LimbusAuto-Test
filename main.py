@@ -47,18 +47,21 @@ def auto_change_Cake():
     """
     logging.info("开始执行：自动收取任务奖励")
     try:
-        if click_image('images/auto_change_Cake_1.png', retry=2):
+        if click_image('images/auto_change_Cake_1.png', retry=2) or click_image('images/auto_change_Cake_1 (2).png', retry=2):
             if click_image('images/auto_change_Cake_2.png', retry=2):
                 if click_image('images/auto_change_Cake_3.png', retry=2) or click_image('images/auto_change_Cake_3 (2).png', retry=2):
                     logging.info("任务奖励收取成功")
                     click_image('images/auto_change_Cake_cancel.png', retry=2)
                     time.sleep(1)
                     back_main_window()
+                    return True
 
         else:
             logging.info("暂无已完成任务")
     except:
         logging.info("发生错误")
+
+    return False
 
 
 def auto_Experience_Dungeon():

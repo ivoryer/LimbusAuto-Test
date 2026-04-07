@@ -18,3 +18,4 @@ def test_wait_timeout():
     """
     result = wait_for_image('images/non_existent.png', timeout=2)
     assert result is False, "wait_for_image 应该在找不到图片时返回 False"
+

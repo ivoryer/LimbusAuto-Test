@@ -1,5 +1,7 @@
 # tests/test_tasks.py
 import pytest
+
+import main
 from main import auto_claim_daily, back_main_window
 from core import find_image
 
@@ -32,3 +34,8 @@ def test_essential_images_exist(image_path):
     """
     import os
     assert os.path.exists(image_path), f"资源文件缺失: {image_path}"
+
+
+def test_auto_change_Cake():
+    reasult = main.auto_change_Cake()
+    assert reasult is True
